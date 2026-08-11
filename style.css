@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f4efe3;
+    color: #252525;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+
+    background:
+        linear-gradient(
+            rgba(244, 239, 227, 0.88),
+            rgba(244, 239, 227, 0.88)
+        ),
+        url("assets/images/library.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: #20233f;
+    line-height: 0.95;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 20px;
+    color: #555;
+}
+
+.tagline {
+    margin-top: 45px;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    line-height: 1.4;
+    color: #20233f;
+}
+
+.description {
+    max-width: 650px;
+    margin: 25px auto 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4d4d4d;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    transition: 0.2s ease;
+}
+
+.primary {
+    background: #20233f;
+    color: #f4efe3;
+}
+
+.primary:hover {
+    background: #16182c;
+}
+
+.secondary {
+    border: 1px solid #20233f;
+    color: #20233f;
+}
+
+.secondary:hover {
+    background: #20233f;
+    color: #f4efe3;
+}
+
+
+/* OTHER SECTIONS */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 24px;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #20233f;
+    margin-bottom: 20px;
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    padding: 40px 0;
+    border-top: 1px solid rgba(32, 35, 63, 0.15);
+}
+
+.section-label {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.content-section h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.content-section > p:not(.section-label) {
+    max-width: 750px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+}
+
+
+/* CHARACTER CARDS */
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.character-card {
+    padding: 28px;
+    border: 1px solid rgba(32, 35, 63, 0.15);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.character-card h3 {
+    color: #20233f;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.character-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.secondary-heading {
+    margin-top: 70px;
+}
+
+
+/* DOWNLOAD BUTTONS */
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 30px 0;
+    }
+
+    .details {
+        gap: 8px;
+        line-height: 1.8;
+    }
+
+}
+
+.author {
+    margin-top: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: #666;
+}
+
+/* PRODUCTION NOTES */
+
+.production-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 24px 100px;
+}
+
+.production-header {
+    padding: 40px 0 80px;
+    border-bottom: 1px solid rgba(32, 35, 63, 0.15);
+}
+
+.production-header h1 {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    margin-bottom: 25px;
+}
+
+.production-intro {
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.production-page .content-section {
+    padding: 65px 0;
+}
+
+.production-page .content-section h2 {
+    margin-bottom: 30px;
+}
+
+.production-page .content-section h3 {
+    color: #20233f;
+    font-size: 1.25rem;
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
+.production-page .content-section p {
+    max-width: 760px;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+}
+
+.production-page ul,
+.production-page ol {
+    max-width: 760px;
+    padding-left: 25px;
+    margin: 15px 0 25px;
+}
+
+.production-page li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #4b4b4b;
+}
+
+.production-page blockquote {
+    max-width: 700px;
+    margin: 20px 0;
+    padding: 18px 25px;
+    border-left: 3px solid #20233f;
+    font-style: italic;
+    color: #20233f;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.production-footer {
+    text-align: center;
+    padding-top: 40px;
+}
